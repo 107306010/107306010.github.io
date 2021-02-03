@@ -1,0 +1,71 @@
+.slideLetterIn{
+    span{
+        &.outer{
+            overflow: hidden;
+            display: inline-block;
+            transition: .8s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            cursor: pointer;
+
+            &:hover{
+                filter: blur(2px);
+                transition: .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                opacity: 0.9;
+            }
+            @for $i from 1 through 10{
+                &:nth-child(#{$i}) .inner{
+                    transition-delay: #{$i*0.05s};
+                }
+                
+            }
+            span{
+                &.inner{
+                    display: block;
+                    background-color: transparent;
+                    transition: .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+                    // https://easings.net/#easeInOutSine
+                    transform-origin: right bottom;
+                    transform: translate(70%) rotate(35deg);
+                    filter: blur(3px);
+                }
+                &.active{
+                    transform: translateX(0px);
+                    filter: blur(0px);
+                }
+            }
+        }
+    }
+}
+.slideLetterUp{
+    span{
+        &.outer{
+            overflow: hidden;
+            display: inline-block;
+            transition: .8s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            cursor: pointer;
+
+            &:hover{
+                filter: blur(2px);
+                transition: .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                opacity: 0.9;
+            }
+            @for $i from 1 through 10{
+                &:nth-child(#{$i}) .inner1{
+                    transition-delay: #{$i*0.1s};
+                }
+                
+            }
+            span{
+                &.inner1{
+                    display: block;
+                    background-color: transparent;
+                    transform: translateY(100px);
+                    transition: .6s cubic-bezier(.5,-0.87,1,1.21);
+                }
+                &.active{
+                    transition: .6s cubic-bezier(.79,1.58,.71,1.1);
+                    transform: translateY(0px);
+                }
+            }
+        }
+    }
+}

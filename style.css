@@ -1,0 +1,560 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+a,
+p,
+button,
+section {
+  font-family: "Biryani", "Microsoft JhengHei", "sans-serif";
+}
+p {
+  font-weight: bold;
+}
+i {
+  font-size: 30px;
+}
+h1,
+h3,
+p,
+button {
+  position: relative;
+  z-index: 1;
+}
+@keyframes navLineAnimation {
+  0% {
+    width: 0%;
+    left: -500px;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.navbar {
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  /* 固定左上角 */
+  left: 0;
+  top: 0;
+  display: flex;
+  /* 調整flex內位置 */
+  /* flex-end 靠右 center 置中 */
+  /* space-between flex內有兩個元素一個靠左一個靠右 */
+  /* space-around 切割兩塊再分別置中 */
+  justify-content: space-between;
+  /* 垂直置中 */
+  align-items: center;
+  padding-left: 25px;
+  z-index: 6;
+}
+.navbar-color {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  animation-name: navLineAnimation;
+  animation-duration: 0.5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  background-color: rgb(0, 0, 0);
+  z-index: 5;
+}
+.navbar a {
+  color: white;
+  /* 把預設底線消除 */
+  text-decoration: none;
+  font-size: 17px;
+  z-index: 7;
+}
+.navbar-brand {
+  font-family: "Audiowide";
+  padding: 0;
+}
+.navbar-list {
+  z-index: 10;
+}
+.navbar-list a {
+  /* 右邊留白 */
+  margin-right: 15px;
+}
+.navbar-list div {
+  position: relative;
+}
+
+/* 桌機模式不顯示 */
+.navbar-toggler {
+  display: none;
+}
+
+@keyframes navLineAnimation {
+  0% {
+    width: 0vw;
+    left: -50px;
+  }
+  50% {
+    width: 50vw;
+  }
+  100% {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    justify-content: start;
+  }
+  .navbar-brand {
+    position: absolute;
+    left: 60px;
+  }
+  .navbar-list {
+    text-align: center;
+    position: fixed;
+    left: -800px;
+    top: 0;
+    background-color: rgba(34, 34, 34, 0.575);
+
+    width: 100vw;
+    /* 高度為視窗高度(50vh為視窗一半高度) */
+    height: 43vh;
+    transition: 0.4s all ease-out;
+    z-index: 11;
+  }
+  /* 選到同時擁有.navbar-list和.active的元素 */
+  .navbar-list.active {
+    left: 0;
+  }
+  .navbar-list a {
+    display: block;
+    padding: 15px 15px;
+  }
+  .navbar-toggler {
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    z-index: 12;
+  }
+  .line,
+  .line:before,
+  .line:after {
+    transition: ease-out 0.4s all;
+  }
+  .line.active {
+    transform: rotateY(180deg);
+    background-color: #ffbb00;
+  }
+  .line.active::after {
+    background-color: #ffbb00;
+  }
+  .line.active::before {
+    background-color: #ffbb00;
+  }
+  .line {
+    width: 20px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    /* 置中 */
+    margin: 0 auto;
+    position: relative;
+    border-radius: 2px;
+  }
+  .line:before,
+  .line:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 2px;
+  }
+  .line::before {
+    bottom: 5px;
+  }
+  .line::after {
+    top: 5px;
+  }
+  .rightBtn {
+    transform: rotate(90deg);
+    right: 0;
+    left: 0;
+    top: 90%;
+    margin: 0 auto;
+    opacity: 0;
+    transition: 0.4s all ease;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+  }
+  #projectPic1:hover button,
+  #projectPic2:hover button {
+    opacity: 1;
+    top: 100%;
+  }
+}
+@media (max-width: 445px) {
+  .hexagon {
+    width: 51px;
+    height: 30px;
+    background: #ffbb00;
+    position: relative;
+    transition: all 0.4s ease;
+    font-size: 10px;
+  }
+  .hexagon::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 25.5px solid transparent;
+    border-right: 25.5px solid transparent;
+    border-bottom: 15px solid #ffbb00;
+    transition: all 0.4s ease;
+  }
+  .hexagon::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 25.5px solid transparent;
+    border-right: 25.5px solid transparent;
+    border-top: 15px solid #ffbb00;
+    transition: all 0.4s ease;
+  }
+  .hexagon:hover {
+    transform: rotateY(360deg);
+  }
+  .hexagon.active {
+    width: 51px;
+    height: 30px;
+    background: white;
+    position: relative;
+  }
+  .hexagon.active::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 25.5px solid transparent;
+    border-right: 25.5px solid transparent;
+    border-top: 15px solid white;
+  }
+}
+.backgroundPic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+.jumbotron {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+#headerText {
+  position: absolute;
+  text-shadow: black 4px 4px 5px;
+}
+@keyframes line1Animation {
+  0% {
+    right: 500px;
+    opacity: 0;
+  }
+  50% {
+    right: -300px;
+    opacity: 0.5;
+  }
+  75% {
+    right: 100px;
+    opacity: 0.75;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+#line1 {
+  position: relative;
+  animation-name: line1Animation;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.23, 0.98, 0.27, 1.34);
+}
+@keyframes line2Animation {
+  0% {
+    left: 500px;
+    opacity: 0;
+  }
+  50% {
+    left: -300px;
+    opacity: 0.5;
+  }
+  75% {
+    left: 100px;
+    opacity: 0.75;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+#line2 {
+  position: relative;
+  animation-name: line2Animation;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: cubic-bezier(0.23, 0.98, 0.27, 1.34);
+}
+#line1 span {
+  display: inline-block;
+  transform: translateX(-1200px);
+}
+#line1 span.active {
+  display: inline-block;
+  transform: translateX(0px);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.text-shadow-black {
+  text-shadow: black 3px 3px;
+}
+.text-shadow-primary {
+  text-shadow: #ffbb00 3px 3px;
+}
+.container {
+  position: relative;
+}
+h1,
+h3,
+p,
+button {
+  position: relative;
+  z-index: 1;
+}
+.oval {
+  position: absolute;
+  height: 300px;
+  width: 350px;
+  top: -150px;
+  left: -170px;
+  z-index: 0;
+  border-radius: 50%;
+  transform: rotate(5deg);
+}
+#picDiv {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: white 4px solid;
+}
+.underline::after {
+  content: "";
+  width: 75%;
+  height: 5px;
+  border-radius: 2px;
+  background-color: #ffbb00;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 10px;
+}
+.underline1::after {
+  content: "";
+  width: 75%;
+  height: 5px;
+  border-radius: 2px;
+  background-color: #9d48e2;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 10px;
+}
+
+.underline-f-b::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  border-radius: 2px;
+  background-color: black;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  bottom: 3px;
+}
+.card {
+  background-color: #9d48e2;
+  transition: all 0.3s ease;
+  color: white;
+}
+.card:hover {
+  background-color: white;
+  color: black;
+}
+.card:hover .card-header {
+  background-color: #ffbb00;
+}
+.habitCol {
+  position: relative;
+}
+.music::after,
+.running::after {
+  content: "";
+  width: 4.5px;
+  height: 75%;
+  border-radius: 2px;
+  background-color: black;
+  display: block;
+  position: absolute;
+  /* 靠右 */
+  left: 100%;
+  bottom: 20%;
+}
+.video::after,
+.fashion::after {
+  content: "";
+  width: 4.5px;
+  height: 75%;
+  border-radius: 2px;
+  background-color: black;
+  display: block;
+  position: absolute;
+  /* 靠左 */
+  right: 100%;
+  bottom: 20%;
+}
+@media (min-width: 446px) {
+  .hexagon {
+    width: 85px;
+    height: 50px;
+    background: #ffbb00;
+    position: relative;
+    transition: all 0.4s ease;
+  }
+  .hexagon::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 42.5px solid transparent;
+    border-right: 42.5px solid transparent;
+    border-bottom: 25px solid #ffbb00;
+    transition: all 0.4s ease;
+  }
+  .hexagon::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 42.5px solid transparent;
+    border-right: 42.5px solid transparent;
+    border-top: 25px solid #ffbb00;
+    transition: all 0.4s ease;
+  }
+  .hexagon:hover {
+    transform: rotateY(360deg);
+  }
+  .hexagon.active {
+    width: 85px;
+    height: 50px;
+    background: white;
+    position: relative;
+  }
+  .hexagon.active::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 42.5px solid transparent;
+    border-right: 42.5px solid transparent;
+    border-top: 25px solid white;
+  }
+}
+
+#projectPic1,
+#projectPic2 {
+  position: relative;
+}
+#projectPic1 img,
+#projectPic2 img {
+  filter: brightness(0.9);
+  transition: 0.4s all ease;
+}
+#projectPic1:hover img,
+#projectPic2:hover img {
+  filter: brightness(1);
+}
+@media (min-width: 768px) {
+  #projectPic1:hover button,
+  #projectPic2:hover button {
+    opacity: 1;
+    right: -30px;
+  }
+  .rightBtn {
+    opacity: 0;
+    transition: 0.4s all ease;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    right: 20px;
+    top: 45%;
+  }
+}
+.info {
+  position: relative;
+}
+.infoDiv {
+  position: relative;
+  transition: ease all 0.3s;
+  border-radius: 3px;
+  padding-left: 3px;
+}
+#fb:hover,
+#ig:hover,
+#mail:hover {
+  right: 20px;
+  background-color: white;
+}
+#mail:hover {
+  color: black;
+}
+.introCol {
+  margin-top: 10px;
+  padding-top: 10px;
+  transition: all ease-out 0.4s;
+}
+.introCol:hover {
+  background-color: #ffae00;
+  box-shadow: 3px 3px 3px black;
+}

@@ -1,0 +1,168 @@
+.slideLetterIn span.outer {
+  overflow: hidden;
+  display: inline-block;
+  -webkit-transition: 0.8s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: 0.8s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  cursor: pointer;
+}
+
+.slideLetterIn span.outer:hover {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  -webkit-transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0.9;
+}
+
+.slideLetterIn span.outer:nth-child(1) .inner {
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
+}
+
+.slideLetterIn span.outer:nth-child(2) .inner {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.slideLetterIn span.outer:nth-child(3) .inner {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+
+.slideLetterIn span.outer:nth-child(4) .inner {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.slideLetterIn span.outer:nth-child(5) .inner {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.slideLetterIn span.outer:nth-child(6) .inner {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.slideLetterIn span.outer:nth-child(7) .inner {
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+
+.slideLetterIn span.outer:nth-child(8) .inner {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.slideLetterIn span.outer:nth-child(9) .inner {
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+}
+
+.slideLetterIn span.outer:nth-child(10) .inner {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.slideLetterIn span.outer span.inner {
+  display: block;
+  background-color: transparent;
+  -webkit-transition: 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
+  -webkit-transform: translate(70%) rotate(35deg);
+          transform: translate(70%) rotate(35deg);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+.slideLetterIn span.outer span.active {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+}
+
+.slideLetterUp span.outer {
+  overflow: hidden;
+  display: inline-block;
+  -webkit-transition: 0.8s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: 0.8s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  cursor: pointer;
+}
+
+.slideLetterUp span.outer:hover {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  -webkit-transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0.9;
+}
+
+.slideLetterUp span.outer:nth-child(1) .inner1 {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.slideLetterUp span.outer:nth-child(2) .inner1 {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.slideLetterUp span.outer:nth-child(3) .inner1 {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.slideLetterUp span.outer:nth-child(4) .inner1 {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.slideLetterUp span.outer:nth-child(5) .inner1 {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.slideLetterUp span.outer:nth-child(6) .inner1 {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.slideLetterUp span.outer:nth-child(7) .inner1 {
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+.slideLetterUp span.outer:nth-child(8) .inner1 {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+.slideLetterUp span.outer:nth-child(9) .inner1 {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+.slideLetterUp span.outer:nth-child(10) .inner1 {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.slideLetterUp span.outer span.inner1 {
+  display: block;
+  background-color: transparent;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: 0.6s cubic-bezier(0.5, -0.87, 1, 1.21);
+  transition: 0.6s cubic-bezier(0.5, -0.87, 1, 1.21);
+}
+
+.slideLetterUp span.outer span.active {
+  -webkit-transition: 0.6s cubic-bezier(0.79, 1.58, 0.71, 1.1);
+  transition: 0.6s cubic-bezier(0.79, 1.58, 0.71, 1.1);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+/*# sourceMappingURL=text.css.map */

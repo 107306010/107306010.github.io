@@ -1,0 +1,13 @@
+.box {
+  width: 100px;
+  height: 100px;
+  border: black solid 5px;
+}
+
+.box .title {
+  font-family: serif;
+  font-weight: bold;
+  font-size: 1.3em;
+  border: black solid 5px;
+}
+/*# sourceMappingURL=text1.css.map */
