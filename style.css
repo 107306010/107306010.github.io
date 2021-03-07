@@ -501,36 +501,42 @@ button {
     border-top: 25px solid white;
   }
 }
-
-#projectPic1,
-#projectPic2 {
+.project-block {
   position: relative;
+  cursor: pointer;
 }
-#projectPic1 img,
-#projectPic2 img {
-  filter: brightness(0.9);
-  transition: 0.4s all ease;
+.project-img,
+.img-text {
+  transition: 0.3s all;
 }
-#projectPic1:hover img,
-#projectPic2:hover img {
-  filter: brightness(1);
+.project-img {
+  display: block;
+  margin: auto;
+  width: 80%;
+  border-radius: 2%;
 }
-@media (min-width: 768px) {
-  #projectPic1:hover button,
-  #projectPic2:hover button {
-    opacity: 1;
-    right: -30px;
-  }
-  .rightBtn {
-    opacity: 0;
-    transition: 0.4s all ease;
-    position: absolute;
-    border: none;
-    background-color: transparent;
-    right: 20px;
-    top: 45%;
-  }
+.img-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  opacity: 0;
+  margin-bottom: 0px;
+  z-index: 100;
 }
+.project-block:hover .project-img {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+.project-block:hover a .img-text {
+  opacity: 1;
+}
+
 .info {
   position: relative;
 }
