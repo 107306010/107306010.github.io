@@ -95,6 +95,8 @@ button {
     display: none;
 }
 
+
+
 @keyframes navLineAnimation {
     0% {
         width: 0vw;
@@ -106,6 +108,31 @@ button {
     100% {
         width: 100vw;
     }
+}
+
+.projectRight::after {
+    content: '';
+    width: 4.5px;
+    height: 75%;
+    border-radius: 2px;
+    background-color: #ffbb00;
+    display: block;
+    position: absolute;
+    /* 靠右 */
+    left: 95%;
+    bottom: 20%;
+}
+.projectLeft::after {
+    content: '';
+    width: 4.5px;
+    height: 75%;
+    border-radius: 2px;
+    background-color: #ffbb00;
+    display: block;
+    position: absolute;
+    /* 靠左 */
+    right: 95%;
+    bottom: 12%;
 }
 
 @media (max-width: 767px) {
@@ -123,13 +150,12 @@ button {
         top: 0;
         background-color: rgba(34, 34, 34, 0.575);
         width: 100vw;
-        /* 高度為視窗高度(50vh為視窗一半高度) */
-        height: 43vh;
+        height: 270px;
         transition: 0.4s all ease-out;
         z-index: 11;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: end;
     }
     /* 選到同時擁有.navbar-list和.active的元素 */
     .navbar-list.active {
@@ -206,6 +232,31 @@ button {
         opacity: 1;
         top: 100%;
     }
+    .projectLeft::after,
+    .projectRight::after {
+        content: '';
+        width: 75%;
+        height: 4.5px;
+        border-radius: 2px;
+        background-color: #ffbb00;
+        display: block;
+        position: absolute;
+        left: 13%;
+        bottom: -5%;
+    }
+    .projectLeft, .projectRight{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+.hexagon {
+    color: white;
+    text-shadow: black 3px 3px;
+}
+.hexagon:hover {
+    color: black;
+    text-shadow: none;
 }
 @media (max-width: 445px) {
     .hexagon {
@@ -215,6 +266,9 @@ button {
         position: relative;
         transition: all 0.4s ease;
         font-size: 10px;
+    }
+    .hexagon#sk1 {
+        font-size: 8px;
     }
     .hexagon::before {
         content: '';
@@ -422,42 +476,47 @@ button {
 .card:hover .card-header {
     background-color: #ffbb00;
 }
-.habitCol {
+.projectCol {
     position: relative;
+    border-radius: 0.25rem;
+    border: 1px solid #ffbb00;
+    color:white;
+    transition: all 0.3s ease;
 }
-.music::after,
-.running::after {
-    content: '';
-    width: 4.5px;
-    height: 75%;
-    border-radius: 2px;
-    background-color: black;
-    display: block;
-    position: absolute;
-    /* 靠右 */
-    left: 100%;
-    bottom: 20%;
+
+.projectCol h2,
+.projectCol h5 {
+    text-shadow: black 3px 3px;
+    width: fit-content;
 }
-.video::after,
-.fashion::after {
-    content: '';
-    width: 4.5px;
-    height: 75%;
-    border-radius: 2px;
-    background-color: black;
-    display: block;
-    position: absolute;
-    /* 靠左 */
-    right: 100%;
-    bottom: 20%;
+
+.projectCol:hover {
+    transition: all 0.1s ease;
+    background-color: white;
+    color: black;
+    h2,h5 {
+        text-shadow: none;
+        transition: all 0.3s ease;
+    }
+    h6 {
+        border-bottom: gray solid 1px;
+    }
 }
+
+.projectCol a {
+    color: black
+}
+
 @media (min-width: 446px) {
     .hexagon {
         width: 85px;
         height: 50px;
-        background: #ffbb00;
+        background: #9d48e2;
         position: relative;
         transition: all 0.4s ease;
+    }
+    .hexagon#sk1:hover {
+        font-size: 14px;
     }
     .hexagon::before {
         content: '';
@@ -468,7 +527,7 @@ button {
         height: 0;
         border-left: 42.5px solid transparent;
         border-right: 42.5px solid transparent;
-        border-bottom: 25px solid #ffbb00;
+        border-bottom: 25px solid #9d48e2;
         transition: all 0.4s ease;
     }
     .hexagon::after {
@@ -480,7 +539,7 @@ button {
         height: 0;
         border-left: 42.5px solid transparent;
         border-right: 42.5px solid transparent;
-        border-top: 25px solid #ffbb00;
+        border-top: 25px solid #9d48e2;
         transition: all 0.4s ease;
     }
     .hexagon:hover {
@@ -544,19 +603,13 @@ button {
     position: relative;
 }
 .infoDiv {
-    position: relative;
     transition: ease all 0.3s;
     border-radius: 3px;
-    padding-left: 3px;
+    padding: 4px;
 }
-#fb:hover,
-#ig:hover,
-#mail:hover {
-    right: 20px;
-    background-color: white;
-}
-#mail:hover {
-    color: black;
+#linkedin a:hover,
+#github a:hover {
+    color: white;
 }
 .introCol {
     margin-top: 10px;

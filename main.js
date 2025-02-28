@@ -8,11 +8,11 @@ $(document).ready(function () {
     });
     $("#sk1").hover(function () {
         $(this).toggleClass("active");
-        $(this).text("Java");
+        $(this).text("JavaScript");
     }
         , function () {
             $(this).toggleClass("active");
-            $(this).text("J");
+            $(this).text("JS");
         }
     );
     $("#sk2").hover(function () {
@@ -26,11 +26,11 @@ $(document).ready(function () {
     );
     $("#sk3").hover(function () {
         $(this).toggleClass("active");
-        $(this).text("Web設計");
+        $(this).text("Java");
     }
         , function () {
             $(this).toggleClass("active");
-            $(this).text("W");
+            $(this).text("J");
         }
     );
     $("#sk4").hover(function () {
