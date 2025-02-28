@@ -262,7 +262,7 @@ button {
     .hexagon {
         width: 51px;
         height: 30px;
-        background: #ffbb00;
+        background: #9d48e2;
         position: relative;
         transition: all 0.4s ease;
         font-size: 10px;
@@ -279,7 +279,7 @@ button {
         height: 0;
         border-left: 25.5px solid transparent;
         border-right: 25.5px solid transparent;
-        border-bottom: 15px solid #ffbb00;
+        border-bottom: 15px solid #9d48e2;
         transition: all 0.4s ease;
     }
     .hexagon::after {
@@ -291,7 +291,7 @@ button {
         height: 0;
         border-left: 25.5px solid transparent;
         border-right: 25.5px solid transparent;
-        border-top: 15px solid #ffbb00;
+        border-top: 15px solid #9d48e2;
         transition: all 0.4s ease;
     }
     .hexagon:hover {
